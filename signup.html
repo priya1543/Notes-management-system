@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title> Sign up </title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+        function submit1(){
+            var e=document.forms["signupform"]["email"].value;
+            var fn=document.forms["signupform"]["fname"].value;
+            var ln=document.forms["signupform"]["lname"].value;
+            var ph=document.forms["signupform"]["phno"].value;
+            var dob=document.forms["signupform"]["dob"].value;
+            var uni=document.forms["signupform"]["university"].value;
+            var deg=document.forms["signupform"]["degree"].value;
+            var str=document.forms["signupform"]["stream"].value;
+            var pass=document.forms["signupform"]["password"].value;
+            var repass=document.forms["signupform"]["repassword"].value;
+            if (e==""){
+                alert("Please enter the email.");
+                return false;
+            }
+            if (fn==""){
+                alert("Please enter the first name.");
+                return false;
+            }
+            if (ln==""){
+                alert("Please enter the last name.");
+                return false;
+            }
+            if (ph==""){
+                alert("Please enter the phone number.");
+                return false;
+            }
+            if (dob==""){
+                alert("Please enter the DOB.");
+                return false;
+            }
+            if (uni==""){
+                alert("Please enter the univeristy.");
+                return false;
+            }
+            if (deg==""){
+                alert("Please enter the degree.");
+                return false;
+            }
+            if (str==""){
+                alert("Please enter the stream.");
+                return false;
+            }
+            if (pass==""){
+                alert("Please enter the password.");
+                return false;
+            }
+            if (repass==""){
+                alert("Please enter the password again.");
+                return false;
+            }
+            alert("Created account successfully. Please verify your email address and login again to continue.");
+            location.replace("file:///D:/Projects/Iwp/Code/login.html");
+        }
+    
+    </script>
+<div>
+<div class="signup"  align="center">
+<h2> Sign-up</h2>
+<form align="center"  name="signupform" onsubmit="return submit1()">
+<table align="center">
+<tr>
+<td> Email address </td> 
+<td> <input type="email" name="email"  placeholder="Enter the email address"> </td>
+</tr>
+<tr>
+<td>First name</td>
+<td><input type="text" name="fname"  placeholder="Enter the first name"> </td>
+</tr>
+<tr>
+<td> Last name </td> 
+<td> <input type="text" name="lname"  placeholder="Enter the last name"> </td>
+</tr>
+<tr>
+<td> Phone number </td>
+<td> <input type="text" name="phno"  placeholder="Enter the mobile number"> </td>
+</tr>
+<tr>
+<td> Date of birth </td>
+<td> <input type="date" name="dob"  placeholder="Enter the date of birth"> </td>
+</tr>
+<tr>
+<td> University</td>
+<td> <input type="text" name="university" placeholder="VIT Chennai"> </td>
+</tr>
+<tr>
+<td> Degree </td>
+<td> <input type="text" name="degree"  placeholder="B.Tech"> </td>
+</tr>
+<tr>
+<td> Stream/ Branch </td>
+<td> <input type="text" name="stream"  placeholder="Computer Science"> </td>
+</tr>
+<tr>
+<td> Year </td>
+<td> <select id="year">
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Password <br>
+<small>(*Password should be of length less than 8)</small> </td>
+<td> <input type="password" name="password"> </td>
+</tr>
+<tr>
+<td> Confirm password</td>
+<td> <input type="password" name="repassword"> </td>
+</tr>
+</table>
+<div class="btn">
+    <button type="submit"> Register </button>
+</div>
+</form>
+<div class="links-s-l"><a href="login.html">Already have an account? Login here!</a> </div>
+<div class="links-s-l"><a href="homepage.html">Get to know about us!</a> </div>
+</div>
+</body>
+</html>
