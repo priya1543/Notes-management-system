@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head> 
-<title> Sign up </title>
+<title> Notefy Sign up </title>
+<style>
+    body{
+        background-color: #8FBC8F;
+    margin: 60px;
+    font-family: 'Merriweather', serif;
+    background-image: url("bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+</style>
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,18 +33,34 @@
             var repass=document.forms["signupform"]["repassword"].value;
             if (e==""){
                 alert("Please enter the email.");
+                 return false;
+            }
+            if(!validateEmail(e)) {
+                alert("Email address is not valid");
                 return false;
             }
             if (fn==""){
                 alert("Please enter the first name.");
                 return false;
             }
+            if(!validateName(fn)){
+                alert("Name is not valid. Name cannot contain digits.");
+                return false;
+            }
             if (ln==""){
                 alert("Please enter the last name.");
                 return false;
             }
+            if(!validateName(ln)){
+                alert("Name is not valid. Name cannot contain digits.");
+                return false;
+            }
             if (ph==""){
                 alert("Please enter the phone number.");
+                return false;
+            }
+            if(!validatePhone(ph)){
+                alert("Phone number is not valid.");
                 return false;
             }
             if (dob==""){
@@ -56,19 +83,37 @@
                 alert("Please enter the password.");
                 return false;
             }
+            if(!validatePassword(pass)){
+                alert("*Password should be of length between 6 and 8. Password should contain atleast one uppercase, one lowercase and one digit with one special character.");
+                return false;
+            }
             if (repass==""){
                 alert("Please enter the password again.");
                 return false;
             }
-            alert("Created account successfully. Please verify your email address and login again to continue.");
-            location.replace("file:///D:/Projects/Iwp/Code/login.html");
+
         }
-    
+        function validatePhone(ph){
+            let res =/^\d{10}$/;
+            return res.test(ph); 
+        }
+        function validateEmail(email) {
+            let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            return res.test(email);
+        }
+        function validateName(name) {
+            let res =/^[a-zA-Z .]+$/;
+            return res.test(name);
+        }
+        function validatePassword(pass){
+            let res=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+            return res.test(pass);
+        }   
     </script>
 <div>
 <div class="signup"  align="center">
 <h2> Sign-up</h2>
-<form align="center"  name="signupform" onsubmit="return submit1()">
+<form align="center"  name="signupform" onsubmit="return submit1()" method="post" action="signupdata.php">
 <table align="center">
 <tr>
 <td> Email address </td> 
@@ -104,7 +149,7 @@
 </tr>
 <tr>
 <td> Year </td>
-<td> <select id="year">
+<td> <select id="year" name="year">
 <option value="1"> 1 </option>
 <option value="2"> 2 </option>
 <option value="3"> 3 </option>
@@ -115,7 +160,7 @@
 </tr>
 <tr>
 <td>Password <br>
-<small>(*Password should be of length less than 8)</small> </td>
+<small>*Password should be of length between 6 and 8. Password should contain atleast one uppercase, one lowercase and one digit with one special character.</small> </td>
 <td> <input type="password" name="password"> </td>
 </tr>
 <tr>
@@ -124,7 +169,7 @@
 </tr>
 </table>
 <div class="btn">
-    <button type="submit"> Register </button>
+    <button type="submit" id="signup_btn" name="signup_btn"> Register </button>
 </div>
 </form>
 <div class="links-s-l"><a href="login.html">Already have an account? Login here!</a> </div>
