@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head> 
-<title> Login </title>
-<link rel="stylesheet" href="style.css">
+<title> Notefy Login </title>
+<style>
+    body{
+    font-family: 'Merriweather', serif;
+    background-image: url("bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding:150px 0 100px 0;
+    }
+</style>
+<link rel="stylesheet" href="styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
 <div>
-<div class="login"  align="center">
+<div class="login" align="center">
 <h2> Login</h2>
-<form align="center">
+<form align="center" method="post" action="login.php">
     <div class="login-form">
         Email address  <br>
         <input type="email" name="email" required="required"> 
     </div>
     <div class="login-form">
         Password <br>
-        <input type="password" name="fname" required="required">
+        <input type="password" name="password" required="required">
     </div>
-<div class="btn">
-    <button type="submit"> Login </button>
+<div class="btn" style="margin:1rem 10rem 1rem 17rem;">
+     <button type="submit" value="submit" name="login_btn">Submit</button>
 </div>
 </form>
 <div class="links-s-l"><a href="#"> Forgot password</a></div>
 <div class="links-s-l"><a href="signup.html">New to our website? Click here to Sign-up!</a> </div>
-<div class="links-s-l"><a href="homepage.html">Get to know about us!</a> </div>
+<div class="links-s-l"><a href="index.html">Get to know about us!</a> </div>
+</div>
 </div>
 </body>
 </html>

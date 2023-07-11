@@ -1,0 +1,349 @@
+/*general*/
+body{
+    text-align: center;
+    font-family: Merriweather;
+    background-color:#f4fdff;
+}
+.btn{
+    text-align: center;
+    width: 30px; 
+    margin:1rem  20rem 1rem 20rem;
+}
+.btn button{
+    background-color:rgb(7, 0, 71);
+    width:6rem;
+    color:white;
+    padding:0.8rem;
+    border: 0.08rem solid black;
+    border-radius: 0.3rem;
+}
+.btn input{
+    background-color:rgb(7, 0, 71);
+    color:rgb(231, 231, 231);
+    padding:0.8rem;
+    border: 0.08rem solid black;
+    border-radius: 0.3rem;
+    width:5rem;
+}
+.btn button:hover{
+    background-color: rgb(15, 0, 148);
+    cursor: pointer;
+
+}
+.btn button a{
+    text-decoration: none;
+    color:white;
+}
+
+h3{
+    color: rgb(0, 0, 26);
+    font-size: 40px;
+}
+/*header-footer*/
+
+.navbar{
+    margin-top: 0px;
+    margin: 0px auto;
+    background-color: rgb(170, 170, 246);
+    color: #efffed;
+    display: block;
+}
+
+@media (max-width: 850px){
+    .navbar{
+        padding: 0.5rem 0.5rem 0.5rem 20rem;
+    }
+}
+
+@media (min-width: 850px){
+    .navbar{
+        padding: 0.5rem 0.5rem 0.5rem 60rem;
+    }
+}
+
+.navBar{
+    margin-top: 0px;
+    margin: 0px auto;
+    background-color: rgb(0, 0, 33);
+    color: #efffed;
+    padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+    display: block;
+    box-shadow: 5px 0px 5px rgb(44, 44, 44);
+}
+
+.nav-item{
+    padding: 0.4rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: black;
+}
+
+footer{
+    padding: 15px;
+    margin: 20px 0px 0px 0px;
+    font-size: medium;
+    text-align: center;
+    background-color: #736790c7;
+    color: white;
+}
+footer h3{
+    color:white;
+    font-size: 30px;
+}
+#about-us{
+    margin: 10px 0px;
+    padding: 10px;
+}
+#about-us h3{
+    text-align: center;
+    font-size: 130%;
+}
+#about-us p{
+    text-align: center;
+}
+
+.contact{
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    background-color: #201c4ed9;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.link-details a{
+    text-decoration: none;
+    color: white;
+}
+
+.link-details a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+/*homepage*/
+
+.welcome{
+    margin: auto;
+    background-color: rgb(0, 0, 26);
+    padding: 5rem 5rem 5rem 5rem;
+    color: white;
+}
+#welcome-text{
+    font-size: 150%;
+    text-align: center;
+    padding: 10px;
+}
+#welcome-image{
+    padding: 15px 20px;
+}
+dl{
+    padding: 10px;
+}
+dt{
+    padding: 8px;
+}
+dd{
+    padding: 5px;
+}
+.btn-home{
+    background-color: rgba(205, 243, 251, 0.934);
+    border: 1px rgb(210, 253, 239);
+    font-family: Merriweather;
+    font-size: large;
+}
+
+/*login*/
+
+.login form{
+    border-style:solid;
+    border-width: 0.09rem;
+    border-color:rgba(5, 0, 0, 0.939);
+    border-radius: 1rem;
+    padding: 1rem 1rem 1rem 1rem ;
+    margin:0 25rem 2rem 25rem;
+    background-color: rgb(255, 255, 255);
+    text-align:center;
+}
+.login input{
+    font-size: 20px; 
+    padding:0.5rem;
+    width:25rem;
+    margin: 1rem 0 0.2rem 0;
+    
+}
+.login a{
+    color: rgb(32, 32, 32);
+    text-decoration: none;
+}
+.login a:hover{
+    font-style: italic;
+    color:rgba(255, 0, 76, 0.651);
+    text-decoration: underline;
+}
+.login a:visited{
+    font-style: italic;
+    color:rgb(149, 0, 62);
+}
+
+/*signup*/
+.signup body{
+    background-image: url("bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.signup form{
+    border-style:solid;
+    border-width: 0.09rem;
+    border-color:rgba(5, 0, 0, 0.939);
+    border-radius: 1rem;
+    padding: 1rem 3rem 1rem 3rem ;
+    margin:0 20rem 2rem 20rem;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+}
+.signup input{
+    font-size: 1rem; 
+    padding:0.5rem;
+    width:18rem;
+    margin-left:3rem;
+    margin-bottom:0.3rem;
+}
+.signup select{
+    font-size: 1rem; 
+    width:5rem;
+    margin-left:3rem;
+}
+.signup small{
+    font-size: 15px;
+    color:rgb(67, 66, 66)
+}
+.signup select{
+    font-size: 1.5rem;
+}
+.signup a{
+    color: rgb(32, 32, 32);
+    text-decoration: none;
+}
+.signup a:hover{
+    font-style: italic;
+    color:rgba(255, 0, 76, 0.651);
+    text-decoration: underline;
+}
+.signup a:visited{
+    font-style: italic;
+    color:rgb(149, 0, 62);
+}
+
+.signup small{
+    color:rgb(168, 0, 0);
+}
+
+.edit form{
+    border-style:solid;
+    border-width: 0.09rem;
+    border-color:rgba(5, 0, 0, 0.939);
+    border-radius: 1rem;
+    padding: 1rem 3rem 1rem 3rem ;
+    margin:0 20rem 2rem 20rem;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+}
+.edit input{
+    font-size: 1rem; 
+    padding:0.5rem;
+    
+}
+.edit small{
+    font-size: 15px;
+    color:rgb(67, 66, 66)
+}
+.edit select{
+    font-size: 1.5rem;
+}
+.edit a{
+    color: rgb(32, 32, 32);
+    text-decoration: none;
+}
+.edit a:hover{
+    font-style: italic;
+    color:rgba(255, 0, 76, 0.651);
+    text-decoration: underline;
+}
+.edit a:visited{
+    font-style: italic;
+    color:rgb(149, 0, 62);
+}
+
+.edit small{
+    color:rgb(168, 0, 0);
+}
+
+/*signup-login*/
+.links-s-l{
+    margin:1rem 0 0 0;
+}
+
+/*dashboard*/
+
+.dashboard button{
+    background-color: rgb(0, 14, 58);
+    text-decoration: none;
+    padding: 1rem;
+    border:0.1rem solid black;
+    margin-bottom:2rem;
+    cursor:pointer;
+    width:13rem;
+}
+.dashboard a{
+    text-decoration: none;
+    color:white;
+}
+#home{
+    padding:3rem;
+}
+
+/*feedback*/
+.developer
+{ 
+    text-align: center;    
+     margin-bottom:0%;    
+    color: white;     
+    font-size: 25px;     
+    font-family: cursive;    
+     background: black; 
+  
+    } 
+    
+    #styleit
+    {   
+        font-family: cursive;    
+         text-align: center;    
+          font-size: 20px;     
+          color: black; 
+        } 
+#table
+{  
+      font-family: cursive;     
+      font-size: 20px;    
+       border-color: black;     
+       table-layout: auto;   
+       width: 50%;   
+        color: black;
+      }
+.container
+{
+  text-align: center;    
+     margin-bottom:0%; 
+     margin-top:5%;   
+    color:black;     
+    font-size: 25px;     
+    font-family: cursive;    
+    
+}

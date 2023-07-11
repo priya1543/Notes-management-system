@@ -2,7 +2,7 @@
     
     session_start(); 
 
-    $connection = mysqli_connect('localhost','root','','notesmanagementsystem');
+    $connection = mysqli_connect('localhost','root','','notes');
     
         $email = $_POST['email'];
         $fname= $_POST['fname'];
@@ -31,7 +31,7 @@
             $message2="Created account successfully. Please verify your email address and login again to continue.";
             echo  "<script>
             window.location.href='login.html';
-            alert($message2);
+            alert('$message2');
             </script>";
             
         }
